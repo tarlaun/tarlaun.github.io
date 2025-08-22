@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name — Personal Site</title>
+  <meta name="description" content="Your Name — research, projects, writing." />
+  <meta property="og:title" content="Your Name — Personal Site" />
+  <meta property="og:description" content="Research, projects, and writing." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0ea5e9" id="theme-color">
+  <style>
+    /* ====== Design tokens ====== */
+    :root {
+      --bg: #0b1020;
+      --bg-elev: rgba(255,255,255,0.04);
+      --card: rgba(255,255,255,0.06);
+      --text: #e6e9f2;
+      --muted: #a0a7c0;
+      --border: rgba(255,255,255,0.12);
+      --shadow: 0 10px 30px rgba(0,0,0,0.35);
+      --accent: #0ea5e9;    /* cyan-500 */
+      --accent-2: #7c3aed;  /* violet-600 */
+      --radius: 16px;
+      --maxw: 1040px;
+      --ring: 0 0 0 3px rgba(14,165,233,.25);
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f7f8fb;
+        --bg-elev: #ffffff;
+        --card: #ffffff;
+        --text: #101323;
+        --muted: #4b5568;
+        --border: rgba(0,0,0,0.08);
+        --shadow: 0 8px 24px rgba(16,19,35,0.08);
+      }
+    }
+    [data-theme="light"] {
+      --bg: #f7f8fb; --bg-elev:#ffffff; --card:#ffffff; --text:#101323; --muted:#4b5568; --border:rgba(0,0,0,.08); --shadow:0 8px 24px rgba(16,19,35,.08);
+    }
+
+    /* ====== Base ====== */
+    * { box-sizing: border-box; }
+    html, body { height: 100%; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background: radial-gradient(1200px 600px at 10% -10%, rgba(124,58,237,.25), transparent 60%),
+                  radial-gradient(900px 500px at 110% 10%, rgba(14,165,233,.25), transparent 55%),
+                  var(--bg);
+      font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+
+    /* ====== Top nav ====== */
+    .nav {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: blur(10px);
+      background: color-mix(in oklab, var(--bg) 85%, transparent);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: .2px; }
+    .logo {
+      width: 32px; height: 32px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      display: grid; place-items: center; color: #fff; font-size: 14px; box-shadow: var(--shadow);
+    }
+    .nav a.link { padding: 8px 10px; color: var(--muted); }
+    .nav a.link:hover { color: var(--text); }
+
+    .actions { display: flex; align-items: center; gap: 10px; }
+    .btn, button.btn {
+      display: inline-flex; align-items:center; gap:8px;
+      padding: 10px 14px; border-radius: 999px; border: 1px solid var(--border);
+      background: linear-gradient(180deg, color-mix(in oklab, var(--card) 70%, transparent), var(--card));
+      box-shadow: var(--shadow); color: var(--text);
+      transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+      cursor: pointer;
+    }
+    .btn:hover { transform: translateY(-1px); box-shadow: 0 12px 36px rgba(0,0,0,.18); }
+    .btn.primary {
+      border-color: color-mix(in oklab, var(--accent), #000 10%);
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: white;
+    }
+
+    /* ====== Hero ====== */
+    .hero { padding: 72px 0 24px; }
+    .hero .inner { display:grid; gap: 18px; }
+    .kicker { color: var(--muted); font-weight: 600; letter-spacing: .2em; text-transform: uppercase; font-size: 12px; }
+    h1 { font-size: clamp(32px, 5vw, 48px); line-height: 1.15; margin: 0; }
+    .tagline { color: var(--muted); max-width: 70ch; }
+    .cta { display:flex; gap: 12px; flex-wrap: wrap; margin-top: 10px; }
+
+    /* ====== Sections ====== */
+    section { padding: 56px 0; }
+    h2 { font-size: 26px; margin: 0 0 16px; }
+    .sub { color: var(--muted); margin-bottom: 24px; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--card);
+      padding: 18px;
+      box-shadow: var(--shadow);
+      transition: transform .16s ease, border-color .16s ease, background .16s ease;
+    }
+    .card:hover { transform: translateY(-2px); border-color: color-mix(in oklab, var(--accent), var(--border) 60%); }
+    .card h3 { margin: 0 0 6px; font-size: 18px; }
+    .card p { margin: 0; color: var(--muted); }
+    .tags { display:flex; gap:6px; flex-wrap:wrap; margin-top: 10px; }
+    .tag { font-size: 12px; padding: 4px 8px; border-radius: 999px; border:1px solid var(--border); color: var(--muted); }
+
+    /* ====== Timeline / list ====== */
+    .list { display:grid; gap: 12px; }
+    .item {
+      display:flex; gap: 14px; align-items:flex-start;
+      border:1px solid var(--border); border-radius: var(--radius); background: var(--card); padding: 14px;
+    }
+    .item .dot { width:10px; height:10px; border-radius:50%; background: linear-gradient(135deg, var(--accent), var(--accent-2)); margin-top:6px; box-shadow: 0 0 0 3px color-mix(in oklab, var(--accent), transparent 70%); }
+
+    /* ====== Footer ====== */
+    footer { padding: 40px 0 60px; color: var(--muted); text-align: center; }
+    .social { display:flex; gap:12px; justify-content:center; margin-top: 10px; }
+    .icon-btn {
+      display:inline-grid; place-items:center; width:40px; height:40px; border-radius: 50%;
+      border:1px solid var(--border); background: var(--bg-elev); box-shadow: var(--shadow);
+    }
+    .icon-btn:hover { outline: none; box-shadow: var(--shadow), var(--ring); }
+
+    /* ====== Reveal on scroll (reduced motion respected) ====== */
+    .reveal { opacity: 0; transform: translateY(8px); }
+    .reveal.show { opacity: 1; transform: none; transition: opacity .5s ease, transform .5s ease; }
+    @media (prefers-reduced-motion: reduce) { .reveal, .reveal.show { opacity: 1; transform: none; transition: none; } }
+
+    /* Small helpers */
+    code.kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background: var(--bg-elev); border:1px solid var(--border); border-radius:8px; padding:2px 6px; color: var(--text); }
+    .spacer { height: 16px; }
+  </style>
+</head>
+<body>
+  <!-- ====== NAV ====== -->
+  <div class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="Home">
+        <div class="logo">TB</div><span>Tarlan Bahadori</span>
+      </a>
+      <div>
+        <a class="link" href="#about">About</a>
+        <a class="link" href="#projects">Projects</a>
+        <a class="link" href="#writing">Writing</a>
+        <a class="link" href="#contact">Contact</a>
+      </div>
+      <div class="actions">
+        <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Résumé</a>
+        <button class="btn" id="themeToggle" aria-label="Toggle theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 3a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V4a1 1 0 0 1 1-1Zm0 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm8-5a1 1 0 0 1 1 1 1 1 0 1 1-2 0 1 1 0 0 1 1-1ZM5.64 5.64a1 1 0 1 1 1.41 1.41l-.7.7a1 1 0 1 1-1.41-1.41l.7-.7Zm12.02 12.02a1 1 0 0 1 1.41 0l.7.7a1 1 0 1 1-1.41 1.41l-.7-.7a1 1 0 0 1 0-1.41ZM4 12a1 1 0 0 1 1 1 1 1 0 1 1-2 0 1 1 0 0 1 1-1Zm1.05 6.95a1 1 0 0 1 1.41 0l.7.7a1 1 0 0 1-1.41 1.41l-.7-.7a1 1 0 0 1 0-1.41Zm13.9-11.9a1 1 0 0 1 0 1.41l-.7.7a1 1 0 1 1-1.41-1.41l.7-.7a1 1 0 0 1 1.41 0Z" fill="currentColor"/>
+          </svg>
+          <span id="themeLabel">Auto</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== HERO ====== -->
+  <header class="hero container" id="top">
+    <div class="inner reveal">
+      <div class="kicker">Hello</div>
+      <h1>I’m <span style="background:linear-gradient(135deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent;">Tarlan Bahadori</span> — I build data & map tools that feel fast.</h1>
+      <p class="tagline">Short bio: PhD @ University of California, Riverside, research in big data, geospatial visualization, and applications of LLMs in big data visualization.</p>
+      <div class="cta">
+        <a class="btn primary" href="#projects">See Projects</a>
+        <a class="btn" href="mailto:you@example.com">Email me</a>
+        <a class="btn" href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ====== ABOUT ====== -->
+  <section id="about">
+    <div class="container">
+      <h2 class="reveal">About</h2>
+      <p class="sub reveal">I care about clear visuals, low latency, and humane developer tools. My work blends systems, visualization, and ML.</p>
+      <div class="grid">
+        <div class="card reveal">
+          <h3>Now</h3>
+          <p>Researching scalable geospatial viz + LLM styling. </p>
+          <div class="tags"><span class="tag">Big Data</span><span class="tag">Maps</span><span class="tag">LLMs</span></div>
+        </div>
+        <div class="card reveal">
+          <h3>Toolbox</h3>
+          <p>Python, Scala/Spark, TypeScript, React, OpenLayers/Mapbox GL, Flask.</p>
+          <div class="tags"><span class="tag">Spark</span><span class="tag">OpenLayers</span><span class="tag">WebGL</span></div>
+        </div>
+        <div class="card reveal">
+          <h3>Reach</h3>
+          <p>bahadori.tarlan [at] gmail.com • Riverside, CA</p>
+          <div class="tags"><span class="tag">Remote/Hybrid</span><span class="tag">Open to collabs</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== PROJECTS ====== -->
+  <section id="projects">
+    <div class="container">
+      <h2 class="reveal">Projects</h2>
+      <p class="sub reveal">Selected work. Add or edit items in the small JS array—no HTML needed.</p>
+      <div class="grid" id="projectGrid" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ====== WRITING / TALKS ====== -->
+  <section id="writing">
+    <div class="container">
+      <h2 class="reveal">Writing & Talks</h2>
+      <div class="list">
+        <div class="item reveal">
+          <div class="dot"></div>
+          <div>
+            <strong>LASEK: LLM-Assisted Style Exploration for Geospatial Data</strong>
+            <div class="muted" style="color:var(--muted)">Poster, 2025 — Short overview of two-call flow for styling maps.</div>
+            <div class="spacer"></div>
+            <a class="btn" href="#" target="_blank" rel="noopener">Paper</a>
+            <a class="btn" href="#" target="_blank" rel="noopener">Slides</a>
+            <button class="btn" data-bibtex='@inproceedings{lasek2025, title={LASEK: LLM-Assisted Style Exploration for Geospatial Data}, year={2025}}'>Copy BibTeX</button>
+          </div>
+        </div>
+        <div class="item reveal">
+          <div class="dot"></div>
+          <div>
+            <strong>Fast vector tiles with meaningful defaults</strong>
+            <div class="muted" style="color:var(--muted)">Blog — Practical tips on sampling, entropy, and legends.</div>
+            <div class="spacer"></div>
+            <a class="btn" href="#" target="_blank" rel="noopener">Read</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CONTACT ====== -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="reveal">Contact</h2>
+      <p class="sub reveal">Open to research collabs, internships, and building useful tools.</p>
+      <div class="social">
+        <a class="icon-btn" href="mailto:you@example.com" aria-label="Email">
+          <!-- envelope icon -->
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v1.2l10 5.8 10-5.8V6a2 2 0 0 0-2-2Zm0 6.3-8.7 5.01a1 1 0 0 1-1 0L4 10.3V18a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7.7Z"/></svg>
+        </a>
+        <a class="icon-btn" href="https://github.com/your-username" target="_blank" rel="noopener" aria-label="GitHub">
+          <!-- github icon -->
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path fill="currentColor" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.5-1.2-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1.7 1.7 2.7 1.2.1-.7.4-1.2.7-1.5-2.7-.3-5.5-1.3-5.5-6a4.7 4.7 0 0 1 1.3-3.3 4.3 4.3 0 0 1 .1-3.3s1-.3 3.4 1.3a11.4 11.4 0 0 1 6.2 0c2.4-1.6 3.4-1.3 3.4-1.3a4.3 4.3 0 0 1 .1 3.3 4.7 4.7 0 0 1 1.3 3.3c0 4.7-2.8 5.6-5.5 6 .5.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg>
+        </a>
+        <a class="icon-btn" href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <!-- linkedin icon -->
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5ZM3 8.98h4v12H3v-12Zm7 0h3.8v1.6h.1c.5-1 1.8-2 3.7-2 4 0 4.8 2.7 4.8 6.2v6.2h-4v-5.5c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.6h-4v-12Z"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Your Name · Built with GitHub Pages
+  </footer>
+
+  <script>
+    // ====== Small JS to make it comfy ======
+
+    // 1) Render project cards from a tiny data array (edit here)
+    const projects = [
+      {
+        title: "LASEK",
+        desc: "LLM-assisted style exploration for geospatial data. Two-call flow, low latency.",
+        tags: ["LLMs", "Geospatial", "UX"],
+        links: [{label:"GitHub", href:"#"}, {label:"Demo", href:"#"}]
+      },
+    ];
+    const grid = document.getElementById("projectGrid");
+    projects.forEach(p => {
+      const card = document.createElement("article");
+      card.className = "card reveal";
+      card.innerHTML = `
+        <h3>${p.title}</h3>
+        <p>${p.desc}</p>
+        <div class="tags">${p.tags.map(t => `<span class="tag">${t}</span>`).join("")}</div>
+        <div class="spacer"></div>
+        ${p.links.map(l => `<a class="btn" target="_blank" rel="noopener" href="${l.href}">${l.label}</a>`).join(" ")}
+      `;
+      grid.appendChild(card);
+    });
+
+    // 2) Theme: auto (OS) by default; user toggle persists in localStorage
+    const themeToggle = document.getElementById("themeToggle");
+    const themeLabel  = document.getElementById("themeLabel");
+    const themeMeta   = document.getElementById("theme-color");
+    const saved = localStorage.getItem("theme"); // "light" | "dark" | null
+
+    function applyTheme(mode) {
+      document.documentElement.removeAttribute("data-theme");
+      if (mode === "light") document.documentElement.setAttribute("data-theme","light");
+      // Update PWA/status bar color to match accent in light/dark
+      themeMeta.setAttribute("content", mode === "light" ? "#0ea5e9" : "#0ea5e9");
+      themeLabel.textContent = mode ? (mode[0].toUpperCase()+mode.slice(1)) : "Auto";
+    }
+
+    function currentPreferred() {
+      if (saved) return saved;
+      return window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+    }
+
+    applyTheme(currentPreferred());
+
+    themeToggle.addEventListener("click", () => {
+      const now = currentPreferred();
+      const next = now === "light" ? "dark" : "light";
+      localStorage.setItem("theme", next);
+      applyTheme(next);
+    });
+
+    // If OS theme changes and user hasn't forced a theme:
+    if (window.matchMedia) {
+      const mq = window.matchMedia("(prefers-color-scheme: light)");
+      mq.addEventListener?.("change", () => {
+        if (!localStorage.getItem("theme")) applyTheme(currentPreferred());
+      });
+    }
+
+    // 3) Reveal-on-scroll
+    const observer = ("IntersectionObserver" in window) ? new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("show"); observer.unobserve(e.target); }});
+    }, { rootMargin: "0px 0px -10% 0px" }) : null;
+
+    document.querySelectorAll(".reveal").forEach(el => {
+      if (observer) observer.observe(el); else el.classList.add("show");
+    });
+
+    // 4) Copy BibTeX button
+    document.querySelectorAll("[data-bibtex]").forEach(btn => {
+      btn.addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(btn.dataset.bibtex);
+          btn.textContent = "Copied ✓";
+          setTimeout(() => btn.textContent = "Copy BibTeX", 1200);
+        } catch {
+          btn.textContent = "Copy failed";
+          setTimeout(() => btn.textContent = "Copy BibTeX", 1200);
+        }
+      });
+    });
+
+    // 5) Year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
