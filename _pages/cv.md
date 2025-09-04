@@ -9,13 +9,6 @@ redirect_from:
 
 {% include base_path %}
 
-Contact
-======
-- **Email:** [bahadori.tarlan@gmail.com](mailto:bahadori.tarlan@gmail.com)
-- **Phone:** [+1 949-573-0630](tel:19495730630)
-- **LinkedIn:** [linkedin.com/in/tarlan-bahadori](https://www.linkedin.com/in/tarlan-bahadori/)
-- **GitHub:** [github.com/tarlaun](https://github.com/tarlaun)
-
 Education
 ======
 * **Ph.D. in Computer Science**, University of California, Riverside — *Sep 2023 – Expected Dec 2027*
