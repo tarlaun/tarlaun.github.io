@@ -33,11 +33,11 @@ Work experience
   
 **Languages** 
 ======
-* English
-* Persian
-* French
-* Spanish
-* Portuguese
+* 🇺🇸 English
+* 🇮🇷 Persian
+* 🇫🇷 French
+* 🇪🇸 Spanish
+* 🇧🇷 Portuguese
 
 Skills
 ======
