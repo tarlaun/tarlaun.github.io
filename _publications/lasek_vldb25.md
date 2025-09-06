@@ -11,7 +11,6 @@ paperurl: "/files/lasek_vldb25_demo.pdf"
 # slidesurl: "/files/lasek_demo_slides.pdf"
 # posterurl: "/files/lasek_poster.pdf"
 # code: "https://github.com/<your-handle>/lasek"
-citation: 'Bahadori, T. et al. (2025). "LASEK: LLM-Assisted Style Exploration Kit for Geospatial Data." In Proceedings of VLDB 2025 (Demo Track).'
 ---
 
 **LASEK** is a system for **interactive exploration and styling of large geospatial datasets**.  
