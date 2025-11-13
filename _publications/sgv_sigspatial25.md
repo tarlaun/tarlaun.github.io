@@ -26,5 +26,5 @@ Traditional force-directed layouts disregard spatial context, while purely geogr
 
 **Artifacts:**  
 - 📄 Paper: [/files/sgv_sigspatial25.pdf](/files/sgv_sigspatial25.pdf)  
-- 🎥 Demo Video: [Watch on Google Drive](https://drive.google.com/your_sgv_video)  
+- 🎥 Demo Video: [Watch on Google Drive](https://drive.google.com/file/d/13wklH3JzeOoYPIG67z549QgNLxTgwX-h/view?usp=share_link) 
 - 💻 Code: [github.com/tarlaun/FDGV](https://github.com/tarlaun/FDGV)
