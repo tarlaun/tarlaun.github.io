@@ -10,6 +10,7 @@ authors: "**Tarlan Bahadori**, Alvin Chiu, Ahmed Eldawy, Michael Goodrich"
 paperurl: "/files/sgv_sigspatial25.pdf"
 code: "https://github.com/tarlaun/fdgv"
 videourl: "https://drive.google.com/your_sgv_video"   # update link
+posterurl: "/files/sgv_poster.pdf"
 ---
 
 **Authors:** **Tarlan Bahadori**, Alvin Chiu, Ahmed Eldawy, Michael Goodrich
