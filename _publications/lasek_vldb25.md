@@ -13,6 +13,8 @@ paperurl: "/files/lasek_vldb25_demo.pdf"
 # code: "https://github.com/<your-handle>/lasek"
 ---
 
+**Authors:** **Tarlan Bahadori**, Sai Sreekar Sarvepalli, Ahmed Eldawy
+
 **LASEK** is a system for **interactive exploration and styling of large geospatial datasets**.  
 Users can **upload their own data**, get **LLM-generated style suggestions** (e.g., graduated ramps, categorical palettes, bivariate overlays), and **see results instantly** on a modern web map backed by **Mapbox Vector Tiles**.
 
