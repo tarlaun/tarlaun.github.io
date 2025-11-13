@@ -3,30 +3,28 @@ title: "SGV: Spatial Graph Visualization"
 collection: publications
 category: conferences
 permalink: /publication/2025-sgv
-excerpt: "."
+excerpt: "A scalable force-directed framework that integrates geographic anchoring to produce clearer, more spatially faithful graph layouts."
 date: 2025-11-01
 venue: "ACM SIGSPATIAL 2025 — Minneapolis, MN"
 paperurl: "/files/sgv_sigspatial25.pdf"
-# Optional extras (uncomment if available)
-# slidesurl: "/files/lasek_demo_slides.pdf"
-# posterurl: "/files/lasek_poster.pdf"
 code: "https://github.com/tarlaun/fdgv"
+videourl: "https://drive.google.com/your_sgv_video"   # update link
 ---
 
-**LASEK** is a system for **interactive exploration and styling of large geospatial datasets**.  
-Users can **upload their own data**, get **LLM-generated style suggestions** (e.g., graduated ramps, categorical palettes, bivariate overlays), and **see results instantly** on a modern web map backed by **Mapbox Vector Tiles**.
+**Authors:** **Tarlan Bahadori**, Alvin Chiu, Ahmed Eldawy, Michael Goodrich
 
-### Why LASEK
-Current tools make it hard to (i) iterate quickly on styles, (ii) keep maps responsive at scale, and (iii) share reproducible styling choices. LASEK addresses these gaps by coupling **LLM-assisted style generation** with a **scalable data-to-tiles pipeline** and a **lightweight web UI** for rapid “try–tweak–compare” workflows.
+**SGV** is a **scalable spatial graph visualization framework** that retains the **geographic meaning** of networks while producing clean, uncluttered layouts. It integrates classical force-directed forces with **novel spatial anchoring**—a gravity-based pull toward real-world regions or points—yielding layouts that respect both topology and geography.
+
+### Why SGV
+Traditional force-directed layouts disregard spatial context, while purely geographic maps ignore graph structure. SGV introduces a **unified anchored force model** that preserves both, reducing clutter and improving readability in large, dense networks. The system is implemented on **Apache Spark**, enabling layouts at massive scale.
 
 ### Key Capabilities
-- **LLM-guided styling**: natural-language prompts propose styles (e.g., “graduated color ramp on `population`,” “categorize by `continent`,” “highlight top 10% by `GDP`”).
-- **Real-time iteration**: instant map updates, side-by-side comparisons, and saved presets.
-- **Scale & performance**: Spark/Scala backend for preprocessing; efficient rendering at interactive zoom levels.
-- **Reproducibility**: exportable style specs and dataset summaries for consistent sharing.
+- **Anchored force model** combining attraction, repulsion, and spatial gravity  
+- **Region- and point-based anchors** for flexible geographic constraints  
+- **Scalable Spark implementation** for graphs with millions of vertices  
+- **Improved readability** (shorter anchor distances, fewer crossings, lower HEL)  
 
 **Artifacts:**  
-  - 📄 Paper: [/files/sgv_sigspatial25.pdf](/files/lasek_vldb25_demo.pdf)  
-  - 🎥 Demo video: [Watch on Google Drive](https://drive.google.com/file/d/1PIyMbhM68kW05BCr5bXcANrpjmxO2FN_/view?usp=sharing)  
-  - 💻 Code: [github.com/tarlaun/LASEK](https://github.com/tarlaun/FDGV)
-
+- 📄 Paper: [/files/sgv_sigspatial25.pdf](/files/sgv_sigspatial25.pdf)  
+- 🎥 Demo Video: [Watch on Google Drive](https://drive.google.com/your_sgv_video)  
+- 💻 Code: [github.com/tarlaun/FDGV](https://github.com/tarlaun/FDGV)
