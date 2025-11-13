@@ -6,6 +6,7 @@ permalink: /publication/2025-cqc
 excerpt: "A fast and scalable technique for generating circle-based quasi-cartograms that preserve topology while supporting large geospatial datasets."
 date: 2025-11-01
 venue: "ACM SIGSPATIAL 2025 — Minneapolis, MN"
+authors: "**Tarlan Bahadori**, Alvin Chiu, Ahmed Eldawy, Michael Goodrich"
 paperurl: "/files/circle_quasi_cartograms_sigspatial25.pdf"
 code: "https://github.com/tarlaun/circle-quasicartograms"
 videourl: "https://drive.google.com/your_cqc_video"   # update link
