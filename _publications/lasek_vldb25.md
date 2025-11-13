@@ -7,10 +7,11 @@ excerpt: "An interactive system that lets users upload large geospatial datasets
 date: 2025-08-01
 venue: "VLDB 2025 — Demo Track (London)"
 paperurl: "/files/lasek_vldb25_demo.pdf"
+authors: "**Tarlan Bahadori**, Sai Sreekar Sarvepalli, Ahmed Eldawy"
 # Optional extras (uncomment if available)
 # slidesurl: "/files/lasek_demo_slides.pdf"
-# posterurl: "/files/lasek_poster.pdf"
-# code: "https://github.com/<your-handle>/lasek"
+posterurl: "/files/lasek_poster.pdf"
+code: "https://github.com/tarlaun/lasek"
 ---
 
 **Authors:** **Tarlan Bahadori**, Sai Sreekar Sarvepalli, Ahmed Eldawy
