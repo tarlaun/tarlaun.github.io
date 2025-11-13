@@ -32,4 +32,5 @@ Current tools make it hard to (i) iterate quickly on styles, (ii) keep maps resp
   - 📄 Paper: [/files/lasek_vldb25_demo.pdf](/files/lasek_vldb25_demo.pdf)  
   - 🎥 Demo video: [Watch on Google Drive](https://drive.google.com/file/d/1PIyMbhM68kW05BCr5bXcANrpjmxO2FN_/view?usp=sharing)  
   - 💻 Code: [github.com/tarlaun/LASEK](https://github.com/tarlaun/LASEK)
+  - 🧾 Poster: [/files/lasek_poster.pdf](/files/lasek_poster.pdf)
 
