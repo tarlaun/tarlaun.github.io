@@ -1,16 +1,16 @@
 ---
-title: "LASEK: LLM-Assisted Style Exploration Kit for Geospatial Data"
+title: "SGV: Spatial Graph Visualization"
 collection: publications
 category: conferences
-permalink: /publication/2025-lasek
-excerpt: "An interactive system that lets users upload large geospatial datasets and rapidly explore, style, and compare layers—guided by LLM suggestions and powered by scalable vector tiles."
-date: 2025-08-01
-venue: "VLDB 2025 — Demo Track (London)"
-paperurl: "/files/lasek_vldb25_demo.pdf"
+permalink: /publication/2025-sgv
+excerpt: "."
+date: 2025-11-01
+venue: "ACM SIGSPATIAL 2025 — Minneapolis, MN"
+paperurl: "/files/sgv_sigspatial25.pdf"
 # Optional extras (uncomment if available)
 # slidesurl: "/files/lasek_demo_slides.pdf"
 # posterurl: "/files/lasek_poster.pdf"
-# code: "https://github.com/<your-handle>/lasek"
+code: "https://github.com/tarlaun/fdgv"
 ---
 
 **LASEK** is a system for **interactive exploration and styling of large geospatial datasets**.  
@@ -26,7 +26,7 @@ Current tools make it hard to (i) iterate quickly on styles, (ii) keep maps resp
 - **Reproducibility**: exportable style specs and dataset summaries for consistent sharing.
 
 **Artifacts:**  
-  - 📄 Paper: [/files/lasek_vldb25_demo.pdf](/files/lasek_vldb25_demo.pdf)  
+  - 📄 Paper: [/files/sgv_sigspatial25.pdf](/files/lasek_vldb25_demo.pdf)  
   - 🎥 Demo video: [Watch on Google Drive](https://drive.google.com/file/d/1PIyMbhM68kW05BCr5bXcANrpjmxO2FN_/view?usp=sharing)  
-  - 💻 Code: [github.com/tarlaun/LASEK](https://github.com/tarlaun/LASEK)
+  - 💻 Code: [github.com/tarlaun/LASEK](https://github.com/tarlaun/FDGV)
 
