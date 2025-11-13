@@ -6,6 +6,7 @@ permalink: /publication/2025-sgv
 excerpt: "A scalable force-directed framework that integrates geographic anchoring to produce clearer, more spatially faithful graph layouts."
 date: 2025-11-01
 venue: "ACM SIGSPATIAL 2025 — Minneapolis, MN"
+authors: "**Tarlan Bahadori**, Alvin Chiu, Ahmed Eldawy, Michael Goodrich"
 paperurl: "/files/sgv_sigspatial25.pdf"
 code: "https://github.com/tarlaun/fdgv"
 videourl: "https://drive.google.com/your_sgv_video"   # update link
