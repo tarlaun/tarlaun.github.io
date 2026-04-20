@@ -9,8 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-
- <p><a href="{{ base_path }}/files/CV_Tarlan_Bahadori_2026.pdf" target="_blank"><strong>Download CV</strong></a></p>
+ <p><a href="{{base_path}}/files/CV_Tarlan_Bahadori_2026.pdf" target="_blank"><strong>Download CV</strong></a></p>
 Education
 ======
 * **Ph.D. in Computer Science**, University of California, Riverside — *Sep 2023 – Expected Dec 2027*
