@@ -30,32 +30,41 @@ h1, h2, h3, h4, h5, h6,
 .page__title { font-weight: 600; }
 
 /* --------------------------------------------------------------------------
-   2. The watercolor wildflower border, fixed along the bottom of the page.
-   mix-blend-mode melts the image's white ground into the page; a soft mask
-   fades the band upward so it never sits behind the body text.
+   2. The watercolor wildflower border along the bottom of the page.
+   A position:fixed layer (not background-attachment:fixed, which Safari
+   renders incorrectly). Light uses the original image; dark uses the
+   transparent cutout veiled into the background so it stays at the very
+   bottom edge and never sits brightly behind the body text.
    -------------------------------------------------------------------------- */
-body {
+body::before {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 250px;
   background-image: url("/images/floral-border.jpg"); /* light mode: the original watercolor */
   background-repeat: repeat-x;
   background-position: center bottom;
   background-size: auto 250px;
-  background-attachment: fixed;
+  pointer-events: none;
+  z-index: -2;
 }
 @media (max-width: 600px) {
-  body { background-size: auto 150px; }
+  body::before { height: 150px; background-size: auto 150px; }
 }
 /* Dark mode: the original's white ground can't work on dark, so use the
    transparent cutout there. A gradient veil fades the flowers into the
    background as they rise, so they stay at the very bottom edge and never
    sit brightly behind the body text. */
-html[data-theme="dark"] body {
+html[data-theme="dark"] body::before {
+  height: 230px;
   background-image:
     linear-gradient(to top, rgba(32, 38, 31, 0) 0%, rgba(32, 38, 31, 0.25) 28%, var(--global-bg-color) 90%),
     url("/images/floral-border.png");
   background-repeat: no-repeat, repeat-x;
   background-position: center bottom, center bottom;
   background-size: 100% 230px, auto 230px;
-  background-attachment: fixed, fixed;
 }
 
 /* --------------------------------------------------------------------------
@@ -164,7 +173,10 @@ html[data-theme="dark"] body {
    -------------------------------------------------------------------------- */
 .fl-flutter {
   position: fixed;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   overflow: hidden;
   pointer-events: none;
   z-index: 6;
@@ -233,10 +245,11 @@ html[data-theme="dark"] body {
    8. Whimsy: a fairy-wand cursor + fairy-dust sparkles (spawned by the small
    script in _includes/footer/custom.html on link/button hover).
    -------------------------------------------------------------------------- */
-$fl-wand: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cline x1='10' y1='10' x2='28' y2='28' stroke='%238a6fa6' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M7 1 8.7 5.3 13 7 8.7 8.7 7 13 5.3 8.7 1 7 5.3 5.3Z' fill='%23f6c945' stroke='%23e0a73a' stroke-width='0.6' stroke-linejoin='round'/%3E%3Ccircle cx='15' cy='4' r='1.1' fill='%23c4a6e0'/%3E%3Ccircle cx='4' cy='15' r='1.1' fill='%23e0a0b8'/%3E%3C/svg%3E");
+/* PNG (not SVG) so Safari/WebKit shows the custom cursor too. */
+$fl-wand: url("/images/wand.png");
 
-body { cursor: $fl-wand 6 6, auto; }
-a, button, [role="button"], .btn, .greedy-nav a { cursor: $fl-wand 6 6, pointer; }
+body { cursor: $fl-wand 8 7, auto; }
+a, button, [role="button"], .btn, .greedy-nav a { cursor: $fl-wand 8 7, pointer; }
 input, textarea, select { cursor: auto; }
 
 .fairy-dust {
@@ -244,7 +257,8 @@ input, textarea, select { cursor: auto; }
   pointer-events: none;
   z-index: 9999;
   border-radius: 50%;
-  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+          clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
   filter: drop-shadow(0 0 3px currentColor);
   will-change: transform, opacity;
   animation: fairy-dust-float 0.9s ease-out forwards;
@@ -264,7 +278,10 @@ html[data-theme="dark"] .fl-flutter { display: none; }   /* butterflies = daytim
 
 .fl-fireflies {
   position: fixed;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   overflow: hidden;
   pointer-events: none;
   z-index: -1; /* behind the text so the glow never washes it out */
