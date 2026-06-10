@@ -26,22 +26,27 @@ $navicon-height             : 4px;
 $sidebar-link-max-width     : 250px;
 $sidebar-screen-min-width   : 1024px;
 
-/* Default light theme for the site */
+/* Default light theme for the site — "Floral" soft watercolor wildflower */
 :root {
-    --global-base-color                 : #{$gray};
-    --global-bg-color                   : #fff;
-    --global-footer-bg-color            : #f2f3f3;
-    --global-border-color               : #{$lighter-gray};
-    --global-dark-border-color          : #bdc1c4;
-    --global-code-background-color      : #fafafa;
-    --global-code-text-color            : #{$darker-gray};
-    --global-fig-caption-color          : mix(#fff,  #{$dark-gray}, 25%);
-    --global-link-color                 : #52adc8;
-    --global-link-color-hover           : mix(#000, #2f7f93, 25%);
-    --global-link-color-visited         : mix(#fff, #2f7f93, 25%);  
-    --global-masthead-link-color        : #{$dark-gray};
-    --global-masthead-link-color-hover  : mix(#000, #{$gray}, 25%);    
-    --global-text-color                 : #{$dark-gray};
-    --global-text-color-light           : #{$light-gray};
-    --global-thead-color                : #{$lighter-gray};
+    --global-base-color                 : #4a554a;
+    --global-bg-color                   : #fffdf8; /* soft warm white */
+    --global-footer-bg-color            : #f6f1e7;
+    --global-border-color               : #e7e0d1;
+    --global-dark-border-color          : #d7cdba;
+    --global-code-background-color      : #f6f1e7;
+    --global-code-text-color            : #46513f;
+    --global-fig-caption-color          : #8a8472;
+    --global-link-color                 : #4f7a47; /* sage green */
+    --global-link-color-hover           : #7e5fa6; /* soft lavender */
+    --global-link-color-visited         : #6f8f8a;
+    --global-masthead-link-color        : #3f4a3f;
+    --global-masthead-link-color-hover  : #4f7a47;
+    --global-text-color                 : #3f4a3f; /* soft charcoal green */
+    --global-text-color-light           : #8a8472;
+    --global-thead-color                : #efe9dc;
+
+    /* Floral accents (consumed by include/_floral.scss) */
+    --fl-leaf                           : #7f9e6f; /* foliage green */
+    --fl-petal                          : #a98bc9; /* lavender */
+    --fl-blossom                        : #d39ab4; /* soft pink */
 }

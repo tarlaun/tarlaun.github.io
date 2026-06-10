@@ -17,4 +17,13 @@ My interests are divided between a variety of fields, I enjoy studying and creat
 - **Languages**: English, Persian French, Spanish, Portuguese
 - **Opportunities**: open to **research/engineering internships** in **Summer 2026** (Big Data, Geospatial Systems, Data Visualization).
 
+## Publications
+
+{% assign home_pubs = site.publications | sort: "date" | reverse %}
+{% for post in home_pubs %}
+- **[{{ post.title }}]({{ post.url }})** — *{{ post.venue }}*{% if post.date %}, {{ post.date | date: "%Y" }}{% endif %}
+{% endfor %}
+
+[See all publications →](/publications/)
+
 
