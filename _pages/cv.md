@@ -72,7 +72,17 @@ Projects
 
 Publications
 ======
-* **LASEK: LLM-Assisted Style Exploration Kit for Geospatial Data** — *Submitted to VLDB, 2025*  
+* **HiFIVE: High-Fidelity Vector-Tile Reduction for Interactive Map Exploration** — *ACM SIGSPATIAL 2026, Riverside, CA (to appear)*  
+  Tarlan Bahadori, Ahmed Eldawy  
+  [arXiv:2603.10270](https://arxiv.org/abs/2603.10270)
+
+* **SGV: Spatial Graph Visualization** — *ACM SIGSPATIAL 2025, Minneapolis, MN*  
+  Tarlan Bahadori, Alvin Chiu, Ahmed Eldawy, Michael Goodrich
+
+* **Circle Quasi-Cartograms: Dorling Cartograms with Edge Connections and Relaxed Overlap Conditions** — *1st ACM SIGSPATIAL International Workshop on Human-Centered Geospatial Computing, Minneapolis, MN, 2025*  
+  Tarlan Bahadori, Alvin Chiu, Ahmed Eldawy, Michael Goodrich
+
+* **LASEK: LLM-Assisted Style Exploration Kit for Geospatial Data** — *VLDB 2025, Demo Track, London*  
   Tarlan Bahadori, Sai Sreekar Sarvepalli, Ahmed Eldawy
 
 Teaching

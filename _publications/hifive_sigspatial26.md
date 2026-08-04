@@ -5,14 +5,14 @@ category: conferences
 permalink: /publication/2026-hifive
 excerpt: "A data-management framework for scalable, high-fidelity client-side geospatial visualization that formalizes visualization-aware tile reduction and prunes tiles via triage and sparsification."
 date: 2026-11-01
-venue: "ACM SIGSPATIAL 2026 (to appear)"
+venue: "ACM SIGSPATIAL 2026 — Riverside, CA (to appear)"
 authors: "**Tarlan Bahadori**, Ahmed Eldawy"
 paperurl: "https://arxiv.org/abs/2603.10270"
 ---
 
 **Authors:** **Tarlan Bahadori**, Ahmed Eldawy
 
-*Accepted at ACM SIGSPATIAL 2026 — camera-ready version forthcoming. A preprint is available on arXiv.*
+*Accepted at ACM SIGSPATIAL 2026 (Riverside, CA) — camera-ready version forthcoming. A preprint is available on arXiv.*
 
 **HiFIVE** is a **data-management framework for scalable, high-fidelity client-side geospatial visualization**. It formalizes the **visualization-aware tile reduction problem**—the trade-off between tile size and visualization distortion—proves it **NP-hard**, and introduces a practical two-stage solution that keeps interactive maps responsive at terabyte scale.
 
