@@ -14,7 +14,7 @@ I am **Tarlan Bahadori**, a Computer Science Ph.D. student at the University of 
 My interests are divided between a variety of fields, I enjoy studying and creating algorithms. I am also passionate about music, history, and language skills.
 
 
-- **Languages**: English, Persian French, Spanish, Portuguese
+- **Languages**: English, Persian, French, Spanish, Portuguese
 - **Opportunities**: open to **research/engineering internships** in **Summer 2026** (Big Data, Geospatial Systems, Data Visualization).
 
 ## Publications

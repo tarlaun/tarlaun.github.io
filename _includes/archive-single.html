@@ -43,7 +43,7 @@
     {% elsif post.collection == 'publications' %}
       {% if post.authors %}
         <p class="archive__item-meta archive__item-authors">
-          {{ post.authors | markdownify | strip }}
+          {{ post.authors | markdownify | remove: "<p>" | remove: "</p>" | strip }}
         </p>
       {% endif %}
       <p class="archive__item-meta">
