@@ -10,7 +10,7 @@ authors: "**Tarlan Bahadori**, Alvin Chiu, Ahmed Eldawy, Michael Goodrich"
 paperurl: "/files/sgv_sigspatial25.pdf"
 code: "https://github.com/tarlaun/fdgv"
 videourl: "https://drive.google.com/your_sgv_video"   # update link
-posterurl: "/files/sgv_poster.pdf"
+posterurl: "/files/SGV_poster.pdf"
 ---
 
 **Authors:** **Tarlan Bahadori**, Alvin Chiu, Ahmed Eldawy, Michael Goodrich
@@ -30,5 +30,5 @@ Traditional force-directed layouts disregard spatial context, while purely geogr
 - 📄 Paper: [/files/sgv_sigspatial25.pdf](/files/sgv_sigspatial25.pdf)  
 - 🎥 Demo Video: [Watch on Google Drive](https://drive.google.com/file/d/13wklH3JzeOoYPIG67z549QgNLxTgwX-h/view?usp=share_link) 
 - 💻 Code: [github.com/tarlaun/FDGV](https://github.com/tarlaun/FDGV)
-- 🧾 Poster: [/files/sgv_poster.pdf](/files/sgv_poster.pdf)
+- 🧾 Poster: [/files/SGV_poster.pdf](/files/SGV_poster.pdf)
 

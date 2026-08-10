@@ -76,6 +76,9 @@ Publications
   Tarlan Bahadori, Ahmed Eldawy  
   [arXiv:2603.10270](https://arxiv.org/abs/2603.10270)
 
+* **CATALYST: CATalogue-driven LLM sYstem for Spatial Tiling** — *ACM SIGSPATIAL 2026, Demo Track, Riverside, CA (to appear)*  
+  Tarlan Bahadori, Ahmed Eldawy
+
 * **SGV: Spatial Graph Visualization** — *ACM SIGSPATIAL 2025, Minneapolis, MN*  
   Tarlan Bahadori, Alvin Chiu, Ahmed Eldawy, Michael Goodrich
 
