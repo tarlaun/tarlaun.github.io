@@ -21,7 +21,9 @@ My interests are divided between a variety of fields, I enjoy studying and creat
 
 {% assign home_pubs = site.publications | sort: "date" | reverse %}
 {% for post in home_pubs %}
-- **[{{ post.title }}]({{ post.url }})** — *{{ post.venue }}*{% if post.date %}, {{ post.date | date: "%Y" }}{% endif %}
+- **[{{ post.title }}]({{ post.url }})**{% if post.authors %}  
+  <span class="pub-authors">{{ post.authors | markdownify | remove: "<p>" | remove: "</p>" | strip }}</span>{% endif %}  
+  *{{ post.venue }}*{% if post.date %}, {{ post.date | date: "%Y" }}{% endif %}
 {% endfor %}
 
 [See all publications →](/publications/)

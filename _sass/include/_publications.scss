@@ -1,0 +1,28 @@
+/* ==========================================================================
+   PUBLICATION AUTHOR LISTS
+   ==========================================================================
+
+   Author lines come from the `authors:` front matter of each entry in
+   _publications/, where the site owner's own name is wrapped in `**...**`.
+   Once markdownified that becomes a <strong>, which is what we tint here so
+   the reader's eye lands on it while scanning a list of papers.
+
+   `.archive__item-authors` is the /publications/ listing (_includes/archive-single.html);
+   `.pub-authors` is the hand-rolled list on the home page (_pages/about.md).
+   ========================================================================== */
+
+.archive__item-authors,
+.pub-authors {
+  color: var(--global-text-color-light);
+
+  strong {
+    color: var(--global-author-highlight-color, var(--global-link-color));
+    font-weight: bold;
+  }
+}
+
+/* The listing markup nests a <p> inside a <p class="archive__item-meta">, so
+   strip the inner element's stacked margins. */
+.archive__item-authors > p {
+  margin: 0;
+}

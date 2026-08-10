@@ -52,4 +52,7 @@ html[data-theme="dark"] {
     --global-text-color                 : #{$text};
     --global-text-color-light           : #{$light-primary-color};
     --global-thead-color                : #{$background-lighter};
+
+    /* Own-name highlight in publication author lists */
+    --global-author-highlight-color     : #{$primary-color};
 }

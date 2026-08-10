@@ -56,4 +56,7 @@ html[data-theme="dark"] {
     --fl-leaf                           : #9cc08f;
     --fl-petal                          : #c4a6e0;
     --fl-blossom                        : #d39ab4;
+
+    /* Own-name highlight in publication author lists */
+    --global-author-highlight-color     : #c4a6e0; /* lavender */
 }
