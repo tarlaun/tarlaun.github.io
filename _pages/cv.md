@@ -76,7 +76,7 @@ Publications
   Tarlan Bahadori, Ahmed Eldawy  
   [arXiv:2603.10270](https://arxiv.org/abs/2603.10270)
 
-* **Starlet: An End-to-End Python Library for Scalable Geospatial Tiling and Vector-Tile Serving** — *ACM SIGSPATIAL 2026, Short Paper, Riverside, CA (to appear)*  
+* **Starlet: An End-to-End Python Library for Scalable Geospatial Tiling and Vector-Tile Serving** — *ACM SIGSPATIAL 2026, Riverside, CA (to appear)*  
   Tarlan Bahadori, Rohan Bennur, Shaolin Xie, Ibrahim Sabek, Ahmed Eldawy
 
 * **CATALYST: CATalogue-driven LLM sYstem for Spatial Tiling** — *ACM SIGSPATIAL 2026, Demo Track, Riverside, CA (to appear)*  
