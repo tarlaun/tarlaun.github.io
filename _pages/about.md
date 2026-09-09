@@ -15,7 +15,7 @@ My interests are divided between a variety of fields, I enjoy studying and creat
 
 
 - **Languages**: English, Persian, French, Spanish, Portuguese
-- **Opportunities**: open to **research/engineering internships** in **Summer 2026** (Big Data, Geospatial Systems, Data Visualization).
+- **Opportunities**: open to **research/engineering internships** in **Summer 2027** (Big Data, Geospatial Systems, Data Visualization).
 
 ## Publications
 
