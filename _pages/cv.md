@@ -13,7 +13,7 @@ redirect_from:
  
 Education
 ======
-* **Ph.D. in Computer Science**, University of California, Riverside — *Sep 2023 – Expected Dec 2027*
+* **Ph.D. Candidate in Computer Science**, University of California, Riverside — *Sep 2023 – Expected Dec 2027*
 * **B.Sc. in Computer Engineering**, Sharif University of Technology — *Sep 2018 – Dec 2022*
 
 Experience
