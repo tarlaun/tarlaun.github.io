@@ -1,5 +1,5 @@
 ---
-title: "CATALYST: CATalogue-driven LLM sYstem for Spatial Tiling"
+title: "CATALYST: Catalogue-driven LLM System for Spatial Tiling"
 collection: publications
 category: conferences
 permalink: /publication/2026-catalyst
@@ -34,7 +34,7 @@ Geospatial data is a large and growing fraction of public open data—Data.gov a
 - Tile-aligned joins finished a cross-dataset aggregation in **58.7 s** vs **2,417.6 s** for the full derive path — identical 3,879,476 output rows
 
 **Artifacts:**
-- 📄 Paper: [/files/catalyst_sigspatial26_demo.pdf](/files/catalyst_sigspatial26_demo.pdf)
+- 📄 Paper (camera-ready): [/files/catalyst_sigspatial26_demo.pdf](/files/catalyst_sigspatial26_demo.pdf)
 - 🎥 Demo Video: [Watch on Google Drive](https://drive.google.com/file/d/1NKF4xRW0QPrZaa-K_Prjb99AAaliyKBk/view?usp=sharing)
 - 💻 Code: [github.com/tarlaun/catalyst](https://github.com/tarlaun/catalyst)
 - 🌐 Live Demo: [starmap.cs.ucr.edu/catalyst](https://starmap.cs.ucr.edu/catalyst)

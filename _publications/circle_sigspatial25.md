@@ -7,7 +7,7 @@ excerpt: "A fast and scalable technique for generating circle-based quasi-cartog
 date: 2025-11-01
 venue: "1st ACM SIGSPATIAL International Workshop on Human-Centered Geospatial Computing - Minneapolis, MN"
 authors: "**Tarlan Bahadori**, Alvin Chiu, Ahmed Eldawy, Michael Goodrich"
-paperurl: "/files/Circle_Quasi_Cartograms_sigspatial25.pdf"
+paperurl: "https://dl.acm.org/doi/pdf/10.1145/3764917.3771335"
 code: "https://github.com/tarlaun/circle-quasicartograms"
 videourl: "https://drive.google.com/your_cqc_video"   # update link
 ---
@@ -26,4 +26,4 @@ Full cartogram generation is often computationally expensive and difficult to in
 - **Compatible with MVT pipelines** and tiled rendering systems  
 
 **Artifacts:**  
-- 📄 Paper: [/files/Circle_Quasi_Cartograms_sigspatial25.pdf](/files/Circle_Quasi_Cartograms_sigspatial25.pdf)
+- 📄 Paper: [dl.acm.org/doi/10.1145/3764917.3771335](https://dl.acm.org/doi/10.1145/3764917.3771335)

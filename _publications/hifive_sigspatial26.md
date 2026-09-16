@@ -1,5 +1,5 @@
 ---
-title: "HiFIVE: High-Fidelity Vector-Tile Reduction for Interactive Map Exploration"
+title: "HiFIVE: High-Fidelity Vector-Tile Reduction for Map Exploration"
 collection: publications
 category: conferences
 permalink: /publication/2026-hifive
@@ -7,12 +7,12 @@ excerpt: "A data-management framework for scalable, high-fidelity client-side ge
 date: 2026-11-03
 venue: "ACM SIGSPATIAL 2026 — Riverside, CA (to appear)"
 authors: "**Tarlan Bahadori**, Ahmed Eldawy"
-paperurl: "https://arxiv.org/abs/2603.10270"
+paperurl: "/files/hifive_sigspatial26.pdf"
 ---
 
 **Authors:** **Tarlan Bahadori**, Ahmed Eldawy
 
-*Accepted at ACM SIGSPATIAL 2026 (Riverside, CA) — camera-ready version forthcoming. A preprint is available on arXiv.*
+*To appear at ACM SIGSPATIAL 2026 (Riverside, CA, Nov 3–6). The camera-ready version is available below.*
 
 **HiFIVE** is a **data-management framework for scalable, high-fidelity client-side geospatial visualization**. It formalizes the **visualization-aware tile reduction problem**—the trade-off between tile size and visualization distortion—proves it **NP-hard**, and introduces a practical two-stage solution that keeps interactive maps responsive at terabyte scale.
 
@@ -26,4 +26,5 @@ Many tools for large spatial data fall back on **server-side rendering**, shippi
 - **Substantial tile-size reductions** while preserving visual fidelity and interactive performance at **terabyte scale**
 
 **Artifacts:**
-- 📄 Preprint: [arxiv.org/abs/2603.10270](https://arxiv.org/abs/2603.10270)
+- 📄 Paper (camera-ready): [/files/hifive_sigspatial26.pdf](/files/hifive_sigspatial26.pdf)
+- 📚 Preprint: [arxiv.org/abs/2603.10270](https://arxiv.org/abs/2603.10270)

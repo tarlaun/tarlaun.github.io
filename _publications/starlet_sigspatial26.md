@@ -33,6 +33,6 @@ Web-scale geospatial visualization normally takes three stages—transform to a 
 - Runtime grows linearly with feature count (397 s → 6,397 s as input grows 17×), while peak memory grows sub-linearly
 
 **Artifacts:**
-- 📄 Paper: [/files/starlet_sigspatial26.pdf](/files/starlet_sigspatial26.pdf)
+- 📄 Paper (camera-ready): [/files/starlet_sigspatial26.pdf](/files/starlet_sigspatial26.pdf)
 - 📦 Package: [pypi.org/project/starlet](https://pypi.org/project/starlet/) — `pip install starlet`
 - 💻 Code: [github.com/ucr-bdlab/starlet](https://github.com/ucr-bdlab/starlet)
